@@ -1,0 +1,6 @@
+1. Các loại biểu đồ:
+Câu hỏi 0: histogram + câu 1
+Câu hỏi 1: Diễn biến số ca nhiễm mới trong 7 ngày gần nhất (Biểu đồ đường) (20/4 - 27/4)
+Câu hỏi 2: Mật độ dân số ảnh hưởng như thế nào đến số ca nhiễm mỗi nước (Scatter plot + ... nếu ko giải thích được) + bộ dữ liệu có diện tích các nước
+Câu hỏi 3: Những yếu tố để một nước có tỉ lệ nhiễm (Tot Cases/1M pop) cao? (heatmap)
+Câu hỏi 4: Radar chart (số ca nhiễm, tử vong, hồi phục, test) + Địa lý chart, pie chart, barchart (tỉ lệ nhiễm từng nước/châu lục)
