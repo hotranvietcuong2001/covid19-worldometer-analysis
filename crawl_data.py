@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import csv
 import os.path
 
@@ -25,7 +25,7 @@ def crawl_covid_today(file_name='covid_data'):
 
     data = []
 
-    table = soup.html.find('table', attrs={'id':'main_table_countries_today'})
+    table = soup.html.find('table', attrs={'id':'main_table_countries_yesterday'})
     rows_table = table.find('tbody').find_all('tr')
 
     for row in rows_table:
@@ -34,7 +34,7 @@ def crawl_covid_today(file_name='covid_data'):
         if cells[0] != '':
             country_info = cells[1:15]
             country_info[1:] = list(map(string_to_int_with_comma, country_info[1:]))
-            date = datetime.date(datetime.now())
+            date = datetime.date(datetime.now() - timedelta(days=1))
             country_info.insert(0, date)
             data.append(country_info)
 
