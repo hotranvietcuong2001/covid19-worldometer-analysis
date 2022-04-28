@@ -11,7 +11,7 @@ url = 'https://www.worldometers.info/coronavirus/'
 
 
 data = requests.get(url)
-soup = BeautifulSoup(data.content)
+soup = BeautifulSoup(data.content, features="lxml")
 
 
 def string_to_int_with_comma(cell):
