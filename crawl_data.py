@@ -11,7 +11,7 @@ url = 'https://www.worldometers.info/coronavirus/'
 
 
 data = requests.get(url)
-soup = BeautifulSoup(data.content, features="lxml")
+soup = BeautifulSoup(data.content.decode('utf-8','ignore'), features="lxml")
 
 
 def string_to_int_with_comma(cell):
@@ -53,4 +53,4 @@ def crawl_covid_today(file_name='covid_data'):
 
 
 if __name__ == '__main__':
-    crawl_covid_today('data/covid_data.csv')
+    crawl_covid_today('data/temp.csv')
